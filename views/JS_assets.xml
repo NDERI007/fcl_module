@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Debug: Add console log to verify assets loading -->
+    <template id="assets_debug" inherit_id="point_of_sale._assets_pos">
+        <xpath expr="." position="inside">
+            <script type="text/javascript">
+                console.log("FCL: Assets template is loading...");
+            </script>
+            <script type="text/javascript" src="/fcl_pos_module/static/src/js/model.js"></script>
+            <script type="text/javascript" src="/fcl_pos_module/static/src/js/paystack_test.js"></script>
+            <script type="text/javascript">
+                console.log("FCL: All assets loaded successfully");
+            </script>
+        </xpath>
+    </template>
+    
+    <!-- Include popup template -->
+    <template id="PaystackPaymentPopup" name="paystack_payment_popup">
+        <div class="popup paystack-payment-popup">
+            <div class="popup-header">
+                <h4 t-esc="props.title"/>
+            </div>
+            
+            <div class="popup-body">
+                <div class="payment-info">
+                    <p><strong>Amount:</strong> ₦<t t-esc="props.amount"/></p>
+                    <p><strong>Reference:</strong> <t t-esc="props.reference"/></p>
+                </div>
+                
+                <div class="payment-options">
+                    <p>Choose payment simulation:</p>
+                    
+                    <div class="button-container">
+                        <button class="button highlight" 
+                                t-on-click="onPaymentSuccess">
+                            ✓ Simulate Success
+                        </button>
+                        
+                        <button class="button" 
+                                t-on-click="onPaymentFailed">
+                            ✗ Simulate Failure  
+                        </button>
+                    </div>
+                    
+                    <div class="real-payment" style="margin-top: 20px; padding-top: 20px; border-top: 1px solid #ccc;">
+                        <p><small>For real integration:</small></p>
+                        <button class="button" 
+                                t-on-click="openPaystackCheckout">
+                            🔗 Open Paystack Checkout
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="popup-footer">
+                <button class="button cancel" 
+                        t-on-click="onCancel">
+                    Cancel
+                </button>
+            </div>
+        </div>
+    </template>
+</odoo>

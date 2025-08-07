@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <!-- Journal for the second Paystack payment method -->
-
+    <data noupdate="1">
         <record id="journal_paystack_2" model="account.journal">
             <field name="name">Paystack Payment</field>
             <field name="code">PAY2S</field>
@@ -15,5 +15,5 @@
             <field name="journal_id" ref="journal_paystack_2"/>
             <field name="use_payment_terminal">Paystack</field>
         </record>
-
+    </data>
 </odoo>
