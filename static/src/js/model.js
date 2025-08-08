@@ -1,7 +1,10 @@
 /** @odoo-module **/
-import { PosGlobalState } from "@point_of_sale/app/models/pos_global_state";
+import { registry } from "@web/core/registry";
 import { PaystackTestPayment } from "./paystack_test";
 
 console.log("Registering paystack payment method...");
-PosGlobalState.addPaymentMethod("Paystack", PaystackTestPayment);
+registry
+  .category("pos_payment_methods")
+  .add("payment_method_paystack", PaystackTestPayment);
+
 console.log("Paystack payment method registered!");

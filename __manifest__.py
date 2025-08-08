@@ -11,19 +11,15 @@
     'depends': ['point_of_sale', 'pos_restaurant', 'stock'],
 
     'data': [
-        'views/JS_assets.xml',
         'views/payment_method.xml',
     ],
 
     'assets': {
-        'point_of_sale.assets_pos': [
-            'fcl_module/static/src/js/model.js',
+        'point_of_sale._assets_pos': [
             'fcl_module/static/src/js/paystack_test.js',
+            'fcl_module/static/src/js/model.js',
         ]
     },
-    'web.assets_qweb': [
-        'fcl_pos_module/views/JS_assets.xml',
-    ],
 
     'installable': True,
     'application': True,
