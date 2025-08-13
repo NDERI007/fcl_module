@@ -1,0 +1,61 @@
+/* static/src/scss/pos_custom_buttons.scss */
+
+// Use a parent selector to ensure your styles only apply to the POS screen
+.pos {
+  // Style the main action buttons like "Payment" and "Customer"
+  .control-button {
+    background-color: #673ab7; // A deep purple
+    color: white !important;
+    border-color: #512da8 !important;
+
+    &:hover {
+      background-color: #512da8 !important; // Darker purple on hover
+    }
+  }
+
+  .numpad {
+    .numpad-button[value="+/-"] {
+      background-color: #f7ad66 !important;
+      &:hover {
+        background-color: #f59a3b !important; /* hover: deeper orange */
+      }
+    }
+  }
+  .numpad-discount.active {
+    border-bottom: 1px solid #4caf50 !important;
+    border-top: 1px solid #4caf50 !important;
+  }
+
+  .btn-light {
+    --btn-active-border-color: #4caf50; /* medium green border */
+  }
+  // Style the product buttons
+  .product-list .product {
+    background-color: #ffffff;
+    border: 1px solid #dcdcdc;
+
+    .product-name {
+      color: #333;
+    }
+
+    &:hover {
+      background-color: #f0f8ff; // A light blue on hover
+    }
+  }
+
+  .orderline.selected {
+    background-color: #d6f5d6; /* light green background */
+    border: 1px solid #4caf50; /* medium green border */
+  }
+  .empty-floor span {
+    visibility: hidden;
+    position: relative;
+  }
+  .empty-floor span::before {
+    content: "POS ready to use";
+    visibility: visible;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
