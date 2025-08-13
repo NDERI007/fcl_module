@@ -1,16 +1,86 @@
-/* static/src/scss/pos_custom_buttons.scss */
-
 // Use a parent selector to ensure your styles only apply to the POS screen
 .pos {
-  // Style the main action buttons like "Payment" and "Customer"
-  .control-button {
-    background-color: #673ab7; // A deep purple
-    color: white !important;
-    border-color: #512da8 !important;
+  .o_colorlist_item_color_7 {
+    --background-color: rgba(
+      200,
+      245,
+      210,
+      var(--bg-opacity, 1)
+    ); /* light pastel green */
+    background-color: var(--background-color) !important;
 
-    &:hover {
-      background-color: #512da8 !important; // Darker purple on hover
-    }
+    --color: rgba(27, 94, 32, var(--text-opacity, 1)); /* dark green text */
+    color: var(--color) !important;
+
+    border: 1px solid #4caf50 !important; /* saturated medium green border */
+  }
+
+  .o_colorlist_item_color_transparent_7 {
+    --background-color: rgba(
+      165,
+      232,
+      178,
+      var(--bg-opacity, 1)
+    ); /* harmonious pastel green */
+    background-color: var(--background-color) !important;
+
+    --color: rgba(27, 94, 32, var(--text-opacity, 1)); /* deep green text */
+    color: var(--color) !important;
+  }
+
+  .btn-primary {
+    --btn-bg: #4caf50; /* green */
+    --btn-border-color: #4caf50;
+    --btn-hover-bg: #43a047; /* darker green for hover */
+    --btn-hover-border-color: #388e3c;
+    --btn-focus-shadow-rgb: 76, 175, 80; /* RGB of green for focus shadow */
+    --btn-active-bg: #388e3c;
+    --btn-active-border-color: #2e7d32;
+
+    --btn-disabled-color: #495057;
+    --btn-disabled-bg: #e6f4ea;
+    --btn-disabled-border-color: #e6f4ea;
+  }
+
+  .btn-secondary {
+    --btn-color: #495057; /* normal dark gray text */
+    --btn-bg: #e6f4ea; /* light green background */
+    --btn-border-color: #e6f4ea; /* match background */
+
+    --btn-hover-color: #495057; /* dark gray on hover */
+    --btn-hover-bg: #d0ecd8; /* slightly richer light green */
+    --btn-hover-border-color: #d0ecd8;
+
+    --btn-focus-shadow-rgb: 76, 175, 80; /* subtle green glow */
+
+    --btn-active-color: #495057; /* keep gray text on press */
+    --btn-active-bg: #d0ecd8; /* gentle green press */
+    --btn-active-border-color: #c8e6c9;
+    --btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+
+    --btn-disabled-color: #495057;
+    --btn-disabled-bg: #e6f4ea;
+    --btn-disabled-border-color: #e6f4ea;
+  }
+
+  .btn-light {
+    --btn-color: #495057; /* normal dark gray text */
+    --btn-bg: #ffffff; /* pure white background */
+    --btn-border-color: #ffffff;
+
+    --btn-hover-color: #495057; /* keep dark gray on hover */
+    --btn-hover-border-color: #e6f4ea;
+
+    --btn-focus-shadow-rgb: 76, 175, 80; /* subtle green focus ring */
+
+    --btn-active-color: #495057; /* keep dark gray when pressed */
+    --btn-active-bg: #e6f4ea; /* soft light green press */
+    --btn-active-border-color: #c8e6c9;
+    --btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+
+    --btn-disabled-color: #495057;
+    --btn-disabled-bg: #ffffff;
+    --btn-disabled-border-color: #ffffff;
   }
 
   .numpad {
@@ -26,9 +96,6 @@
     border-top: 1px solid #4caf50 !important;
   }
 
-  .btn-light {
-    --btn-active-border-color: #4caf50; /* medium green border */
-  }
   // Style the product buttons
   .product-list .product {
     background-color: #ffffff;
