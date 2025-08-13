@@ -110,6 +110,22 @@
     }
   }
 
+  /* hide the default static <img> */
+  .pos-logo {
+    display: none !important;
+  }
+  */
+
+  /* show your custom logo instead (adjust size) */
+  .pos-centerheader::before {
+    content: "";
+    display: block;
+    width: 160px;
+    height: 42px;
+    background: url("/fcl_module/static/src/img/pets_32dp_DA954B.png") no-repeat
+      center/contain;
+  }
+
   .orderline.selected {
     background-color: #d6f5d6; /* light green background */
     border: 1px solid #4caf50; /* medium green border */

@@ -12,7 +12,7 @@
 
     'assets': {
         'point_of_sale._assets_pos': [
-            'fcl_module/static/src/scss/no_floor.scss'
+            'fcl_module/static/src/scss/custom_styles.scss',
         ]
     },
 
